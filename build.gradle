@@ -1,0 +1,32 @@
+plugins {
+	id 'org.springframework.boot' version '2.4.2'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+	id "io.freefair.lombok" version "5.0.1"
+}
+
+group = 'pl.siekoduje'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '14'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-mail'
+
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+	testImplementation 'org.junit.jupiter:junit-jupiter-params:5.7.0'
+	testImplementation group: 'com.icegreen', name: 'greenmail-junit5', version: '1.6.2'
+	testImplementation group: 'com.icegreen', name: 'greenmail-spring', version: '1.6.2'
+
+}
+
+test {
+	useJUnitPlatform()
+}

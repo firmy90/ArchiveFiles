@@ -1,0 +1,25 @@
+#==============application properties =======================
+application:
+    backup:
+        name: "PuzzlesInSpringTest"
+        source: "from-dir"
+        destination: "to-dir"
+        interval:
+            value: 3
+            unit: "HOURS"
+
+
+
+#====================spring mail properties ==========================
+spring:
+    mail:
+        host: "smtp.gmail.com"
+        port: 587
+        username: "some-email-from-gmail@gmail.com"
+        password:
+        properties:
+            mail:
+                smtp:
+                    auth: true
+                    starttls:
+                        enable: true

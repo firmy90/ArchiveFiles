@@ -1,0 +1,35 @@
+#==============application properties =======================
+application:
+  backup:
+    name: "PuzzlesInSpring"
+    source: "from-dir"
+    destination: "to-dir"
+    interval:
+      value: 1
+      unit: "MINUTES"
+
+#==================== spring mail properties ==========================
+spring:
+  mail:
+    host: "smtp.gmail.com"
+    port: 587
+    username: "some-email-from-gmail@gmail.com"
+    password:
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+#=========================== logging properties ======================
+logging:
+  level:
+    root: warn
+    pl.siekoduje: info
+  file:
+    path: logs
+    name: ${logging.file.path}/application.log
+
+
+
